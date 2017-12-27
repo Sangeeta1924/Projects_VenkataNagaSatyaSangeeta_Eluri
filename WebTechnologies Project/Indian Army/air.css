@@ -1,0 +1,9 @@
+ul.navbar{list-style-type:none;padding:0;margin:0;position:absolute;top:4em;left:1em;width:9em}
+
+ul.navbar li{background:#4BE5E7;margin:0.5em;padding:0.3em;border-right:1em solid black}
+
+ul.navbar a{text-decoration:none}
+
+a:link{color:blue}
+a:visited{color:purple}
+p.abt{margin:1cm 2cm 2cm 5cm}

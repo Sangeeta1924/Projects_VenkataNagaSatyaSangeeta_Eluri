@@ -1,0 +1,208 @@
+<html>
+
+<head>
+
+<title> </title>
+<script language="javascript" type="text/javascript">
+function valid()
+{
+ nam=document.getElementById("name").value;
+ if(nam.search(/^[A-Z][a-z]+, ?[A-Z][a-z]+$/)!=0)
+ alert("invalid name");
+
+ fnam=document.getElementById("fname").value;
+ if(fnam.search(/^[A-Z][a-z]+, ?[A-Z][a-z]+$/)!=0)
+ alert("invalid father's name");
+
+dd=document.getElementById("dd").value;
+ if(dd.search(/^\d{2}$/)!=0)
+ alert("day should lie between [1-31]");
+
+
+mm=document.getElementById("mm").value;
+ if(mm.search(/^\d{2}$/)!=0)
+ alert("month should lie between [1-12]");
+
+  year=document.getElementById("yyyy").value;
+  y=year-0;
+if(y<1986||y>1996)
+ alert("not eligible by age");
+ 
+mail=document.getElementById("email").value;
+ if(mail.search(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)!=0)
+ alert("invalid email");
+
+ num=document.getElementById("phno").value;
+ if(num.search(/^\d{10}$/)!=0)
+ alert("invalid phone number");
+
+  perc=document.getElementById("pr").value;
+  p=perc-0;
+if(p<55||p>100)
+ alert("not eligible by marks");
+
+
+h=document.getElementById("ht").value;
+w=document.getElementById("wt").value;
+
+h1=h-0;
+w1=w-0;
+h2=h1*h1;
+b=w1/h2;
+
+if(b<20||b>30)
+ alert("not eligible by BMI");
+
+}
+</script>
+
+
+</head>
+
+
+
+
+
+
+<body bgcolor="#B5B2B2">
+	<hr/>
+		<h2 style="text-align:center"><b>REGISTRATION FORM</b></h2>
+	<hr/>
+	<form>
+	<table>
+	   <tr>
+		<td> NAME:</td>
+ 		<td> </td>
+		<td> <input type="text" id="name" value="enter name"/> </td>
+	   </tr>
+	    <tr>
+		<td>  FATHERS NAME:</td>
+ 		<td> </td>
+		<td> <input type="text" id="fname" value="enter fathers name"/> 			</td>
+	   </tr>
+	     <tr>
+		<td> ADDRESS:</td>
+ 		<td> </td>
+		<td> <textarea id="add" value="enter address" size="30"> </textarea> </td>
+	   </tr>
+	    <tr>
+		<td> STATE:</td>
+ 		<td> </td>
+		<td> <select id="state">
+			<option value="AP"> Andhra Pradesh </option> 
+			<option value="ArP"> Arunachal Pradesh </option>
+			<option value="Asm"> Assam </option>
+			<option value="Br"> Bihar </option>
+			<option value="Ch"> Chattisgarh </option>
+			<option value="Go"> Goa </option>
+			<option value="Guj"> Gujrat </option>
+			<option value="Har"> Haryana </option>
+			<option value="HP"> Himachal Pradesh </option>
+			<option value="JnK"> Jammu and Kashmir </option>
+			<option value="Jh"> Jharkhand </option>
+			<option value="Knt"> Karnataka </option>
+			<option value="Krl"> Kerala</option>
+			<option value="MP"> Madhya Pradesh</option>
+			<option value="Mh">Maharashtra  </option>
+			<option value="Man">  Manipur</option>
+			<option value="Megh"> Meghalaya </option>
+			<option value="Miz"> Mizoram </option>
+			<option value="Nag">  Nagaland</option>
+			<option value="Ors">Orissa  </option>
+			<option value="Pun"> Punjab </option>
+			<option value="Raj"> Rajasthan </option>
+			<option value="Sik"> Sikkim </option>
+			<option value="Tn"> Tamil Nadu </option>
+			<option value="Tr"> Tripura </option>
+			<option value="Ut"> Uttaranchal </option>
+			<option value="Up">Uttar Pradesh</option>
+			<option value="Wb">West Bengal</option>
+
+
+
+
+
+
+                    </select>
+	        </td>
+	   </tr>
+	   <tr>
+		<td> DATE OF BIRTH:</td>
+ 		<td> </td>
+		<td> <input type="text" id="dd" value="dd"/> </td>
+		<td> <input type="text" id="mm" value="mm"/> </td>
+		<td> <input type="text" id="yyyy" value="yyyy"/> </td>
+	   </tr>
+	   <tr>
+		<td> EMAIL ID:</td>
+ 		<td> </td>
+		<td> <input type="text" id="email" value="abc@xyz.com"/> </td>
+	   </tr>
+	   <tr>
+		<td> PHONE NUMBER:</td>
+ 		<td> </td>
+		<td> <input type="text" id="phno" value="9xxxxxxxxx"/> </td>
+	   </tr>
+	   <tr>
+		<td> FIELD OF CHOICE:</td>
+ 		<td> </td>
+		<td> <select id="field">
+                        <option value="navy"> NAVY </option> 
+			<option value="army"> ARMY </option>
+			<option value="airforce"> AIR FORCE </option>
+                     </select>
+	      </td>
+	   </tr>
+          </table>
+          <table>
+	     <tr>
+		<td> GENDER:</td>
+ 		<td> </td>
+		<td> <input type="radio" name="gender"/>MALE</td>
+                <td>    <input type="radio" name="gender"/>FEMALE</td>
+           </tr>
+ 	</table>
+        <table>
+  		<tr>
+		 <td>EDUCATIONAL QUALIFICATION</td>
+ 		<td> </td>
+		 <td><input type="checkbox" name="edu"/> 10+2/Intermediate</td>
+		 <td><input type="checkbox" name="edu"/> Graduate</td>
+		 <td><input type="checkbox" name="edu"/> Post Graduate</td>
+		</tr> 
+	</table>
+
+	<table>
+		<tr>
+		 <td>10+2/INTERMEDIATE %:</TD>
+ 		<td> </td>
+		 <td><input type="text" id="pr" value="xx.xx"/></td>
+		</tr>
+		<tr>
+		 <td>HEIGHT(m)</td>
+		 <td>WEIGHT(kg)</td>
+		</tr>
+		<tr>
+		 <td><input type="text" id="ht" value=""/></td>
+		 <td><input type="text" id="wt" value=""/></td>
+		</tr>	  
+	</table>
+<pre>
+
+
+
+
+</pre>
+
+	<table>
+		<tr>
+		  <td><input type="button" id="submit" value="SUBMIT" onclick="valid()" /></td>
+		  <td><input type="reset" id="reset" value="RESET" /></td>
+		</tr>
+	</table>
+
+
+
+	</form>
+</body>
+</html>
